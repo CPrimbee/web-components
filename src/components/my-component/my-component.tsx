@@ -3,7 +3,7 @@ import { format } from '../../utils/utils';
 
 @Component({
   tag: 'my-component',
-  styleUrl: 'my-component.css',
+  styleUrls: ['my-component.css', '../../assets/fontawesome/css/all.css'],
   shadow: true,
 })
 export class MyComponent {
@@ -27,6 +27,6 @@ export class MyComponent {
   }
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    return <div><i class="fas fa-question-circle"></i>Hello, World! I'm {this.getText()}</div>;
   }
 }

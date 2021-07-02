@@ -6,6 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface BadgeAssociado {
+        "associadoIcon": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +25,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLBadgeAssociadoElement extends Components.BadgeAssociado, HTMLStencilElement {
+    }
+    var HTMLBadgeAssociadoElement: {
+        prototype: HTMLBadgeAssociadoElement;
+        new (): HTMLBadgeAssociadoElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +38,14 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "badge-associado": HTMLBadgeAssociadoElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface BadgeAssociado {
+        "associadoIcon"?: string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +61,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "badge-associado": BadgeAssociado;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +69,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "badge-associado": LocalJSX.BadgeAssociado & JSXBase.HTMLAttributes<HTMLBadgeAssociadoElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
