@@ -23,6 +23,46 @@ badge-icon i {
   background-color: #5FB7B1;
 }
 
+.inquilino {  
+  background-color: #B656D8;
+}
+
+.fa-users {  
+  background-color: #FF6633;
+}
+
+.fa-wrench {  
+  background-color: #0089CC;
+}
+
+.fa-address-card {  
+  background-color: #0089CC;
+}
+
+.visitante {
+  background-color: #FFFFFF;
+  color: #FF6633;
+  border: 1px solid #FF6633;
+}
+
+.prestadorTemporario {
+  background-color: #FFFFFF;
+  color: #0089CC;
+  border: 1px solid #0089CC;
+}
+
+.fa-taxi {
+  background-color: #FFFFFF;
+  color: #0089CC;
+  border: 1px solid #0089CC;
+}
+
+.fa-shopping-cart {
+  background-color: #FFFFFF;
+  color: #0089CC;
+  border: 1px solid #0089CC;
+}
+
 .mini {
   width: 25px;
   height: 20px;

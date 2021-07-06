@@ -23,6 +23,22 @@ export class Badge {
         return "fa fa-star";    
       case "morador":
         return "fa fa-home";
+      case "inquilino":
+        return "fa fa-home inquilino";
+      case "familiar":
+        return "fa fa-users";
+      case "prestador":
+        return "fa fa-wrench";
+      case "funcionario":
+        return "fa fa-address-card";
+      case "visitante":
+        return "fa fa-users visitante";
+      case "prestadorTemporario":
+        return "fa fa-wrench prestadorTemporario";
+      case "taxi":
+        return "fa fa-taxi";
+      case "entregador":
+        return "fa fa-shopping-cart";
       default:
         break;
     }
