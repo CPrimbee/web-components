@@ -1,0 +1,36 @@
+@import '../../assets/fontawesome/css/all.min.css';
+
+badge-icon i {
+  color: #FFFFFF;
+  display: table-cell;
+
+  width: 40px;
+  height: 32px;
+  padding-top: 8px;
+
+  font-size: 24px;
+  text-align: center;
+  
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+}
+
+.fa-star {  
+  background-color: #f1be19;
+}
+
+.fa-home {  
+  background-color: #5FB7B1;
+}
+
+.mini {
+  width: 25px;
+  height: 20px;
+  padding-top: 5px;
+  
+  font-size: 16px;
+  text-align: center;
+  
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+}

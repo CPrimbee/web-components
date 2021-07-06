@@ -6,71 +6,48 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface BadgeAssociado {
-        "associadoIcon": string;
-    }
-    interface MyComponent {
+    interface BadgeIcon {
         /**
-          * The first name
+          * Miniatura do badge
          */
-        "first": string;
+        "mini": boolean;
         /**
-          * The last name
+          * Tipo do associado associado, morador, inquilino
          */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "tipo": string;
     }
 }
 declare global {
-    interface HTMLBadgeAssociadoElement extends Components.BadgeAssociado, HTMLStencilElement {
+    interface HTMLBadgeIconElement extends Components.BadgeIcon, HTMLStencilElement {
     }
-    var HTMLBadgeAssociadoElement: {
-        prototype: HTMLBadgeAssociadoElement;
-        new (): HTMLBadgeAssociadoElement;
-    };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLBadgeIconElement: {
+        prototype: HTMLBadgeIconElement;
+        new (): HTMLBadgeIconElement;
     };
     interface HTMLElementTagNameMap {
-        "badge-associado": HTMLBadgeAssociadoElement;
-        "my-component": HTMLMyComponentElement;
+        "badge-icon": HTMLBadgeIconElement;
     }
 }
 declare namespace LocalJSX {
-    interface BadgeAssociado {
-        "associadoIcon"?: string;
-    }
-    interface MyComponent {
+    interface BadgeIcon {
         /**
-          * The first name
+          * Miniatura do badge
          */
-        "first"?: string;
+        "mini"?: boolean;
         /**
-          * The last name
+          * Tipo do associado associado, morador, inquilino
          */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "tipo"?: string;
     }
     interface IntrinsicElements {
-        "badge-associado": BadgeAssociado;
-        "my-component": MyComponent;
+        "badge-icon": BadgeIcon;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "badge-associado": LocalJSX.BadgeAssociado & JSXBase.HTMLAttributes<HTMLBadgeAssociadoElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "badge-icon": LocalJSX.BadgeIcon & JSXBase.HTMLAttributes<HTMLBadgeIconElement>;
         }
     }
 }
